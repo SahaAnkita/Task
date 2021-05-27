@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Javascript Form</title>
+    <title>Javascript Form With Variable Declaration</title>
     
 </head>
 
 <body>
-    <h2> Create a js file which contains variable declaration for a form which asks following basic details :
-        (What is your Name, Email, age, address, phone number, gender,Are you married)</h2>
+    <!-- 2.<h2> Create a js file which contains variable declaration for a form which asks following basic details :
+        (What is your Name, Email, age, address, phone number, gender,Are you married)</h2> -->
 
     <label for="name">Name:</label> <input id="myName" type="text" />
     <br><br>
@@ -18,21 +18,21 @@
     <br><br>
     <label for="name">Address:</label> <input id="myAddress" type="text" />
     <br><br>
-    <label for="name">Phone:</label> <input id="myphone" type="text" />
+    <label for="name">Phone:</label> <input id="myPhone" type="text" />
     <br><br>
-    <label for="name">Gender:</label> <input id="mygender" type="text" />
+    <label for="name">Gender:</label> <input id="myGender" type="text" />
     <br><br>
-    <label for="name">Marriage Status:</b> <input id="mymarriage_status" type="text" />
+    <label for="name">Marriage Status:</b> <input id="myMarriageStatus" type="text" />
         <br><br>
         <button id="submit">Submit</button>
 
-        <p>Your name : <span id="opName">____</span></p>
-        <p>Your mail id : <span id="opEmail">____</span></p>
-        <p>Your age : <span id="opAge">____</span></p>
-        <p>Your address : <span id="opAddress">____</span></p>
-        <p>Your phone no : <span id="opPhone">____</span></p>
-        <p>Your gender : <span id="opGender">____</span></p>
-        <p>You are: <span id="opMarriage_status">____</span></p>
+        <p>Your name : <span id="outputName">____</span></p>
+        <p>Your mail id : <span id="outputEmail">____</span></p>
+        <p>Your age : <span id="outputAge">____</span></p>
+        <p>Your address : <span id="outputAddress">____</span></p>
+        <p>Your phone no : <span id="outputPhone">____</span></p>
+        <p>Your gender : <span id="outputGender">____</span></p>
+        <p>You are: <span id="outputMarriageStatus">____</span></p>
         <script>
             var submit = document.getElementById("submit");
 
@@ -41,17 +41,17 @@
                     myEmail = document.getElementById("myEmail").value,
                     myAge = document.getElementById("myAge").value,
                     myAddress = document.getElementById("myAddress").value,
-                    myphone = document.getElementById("myphone").value,
-                    mygender = document.getElementById("mygender").value,
-                    mymarriage_status = document.getElementById("mymarriage_status").value;
+                    myPhone = document.getElementById("myPhone").value,
+                    myGender = document.getElementById("myGender").value,
+                    myMarriageStatus = document.getElementById("myMarriageStatus").value;
 
-                document.getElementById("opName").innerText = myName;
-                document.getElementById("opEmail").innerText = myEmail;
-                document.getElementById("opAge").innerText = myAge;
-                document.getElementById("opAddress").innerText = myAddress;
-                document.getElementById("opPhone").innerText = myphone;
-                document.getElementById("opGender").innerText = mygender;
-                document.getElementById("opMarriage_status").innerText = mymarriage_status;
+                document.getElementById("outputName").innerText = myName;
+                document.getElementById("outputEmail").innerText = myEmail;
+                document.getElementById("outputAge").innerText = myAge;
+                document.getElementById("outputAddress").innerText = myAddress;
+                document.getElementById("outputPhone").innerText = myPhone;
+                document.getElementById("outputGender").innerText = myGender;
+                document.getElementById("outputMarriageStatus").innerText = myMarriageStatus;
             }
         </script>
 
