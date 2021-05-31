@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assign the variables as appropriate default value</title>
+
+</head>
+
+<body>
+    <!-- 1. In the variables declare above assign the variables as appropriate default value instead of null. -->
+    <script>
+        function employeeDetails(myName, { myEmail="sahaankita757@gmail.com", myAge="26", myAddress="Serampore", myPhone="8910016556", myGender = 'Female', myMarriageStatus = 'Single' } = {}) {
+            console.log('My name' + ' ' + ' is ' + myName );
+            console.log('My mail id' + ' ' + ' is ' + myEmail );
+            console.log('My age' + ' ' + ' is ' + myAge );
+            console.log('My address' + ' ' + ' is ' + myAddress );
+            console.log('My phone no' + ' ' + ' is ' + myPhone );
+            console.log('I' + ' ' + ' am ' + myGender );
+            console.log('I' + ' ' + ' am ' + myMarriageStatus );
+
+}
+        employeeDetails("Ankita");
+    </script>
+</body>
+
+</html>
