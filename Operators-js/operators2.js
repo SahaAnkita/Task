@@ -25,8 +25,8 @@ document.write("<h2>Result is: "+result1+"</h2>");   //all the things converted 
 /*4.
  Write an operation to get its result as NaN.*/
 
-
-
+let num = 19;
+console.log(19/ "Ankita");
 
 /*5. 
 Take 2 boolean variables as true and false and perform And and Or logical operation over them and print the result as well as operation*/
