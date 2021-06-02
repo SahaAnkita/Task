@@ -8,7 +8,7 @@ let d = "Is"
 
 let result = a + b + c + d;
 
-document.write("<h1>Result is: "+result+"</h1>");
+document.write(`<h1>Result is: ${result}</h1>`);
 
 /*3. 
 Take 2 Strings and 2 numbers and perform addition operation on them in same sequence.*/
@@ -20,7 +20,7 @@ let d1 = 6;
 
 let result1 = a1 + b1 + c1 + d1;
 
-document.write("<h2>Result is: "+result1+"</h2>");   //all the things converted into string
+document.write(`<h2>Result is: ${result1}</h2>`);   //all the things converted into string
 
 /*4.
  Write an operation to get its result as NaN.*/

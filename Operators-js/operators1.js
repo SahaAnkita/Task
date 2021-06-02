@@ -53,28 +53,28 @@ console.log(exponentiation);
 // preincrement
 
 let number13 = 3;
-let preincrement = ++number13;
+let preIncrement = ++number13;
 
-console.log(preincrement);
+console.log(preIncrement);
 
 // postincrement
 
 let number14 = 2;
-let postincrement = number13++;
+let postIncrement = number13++;
 
-console.log(postincrement);
+console.log(postIncrement);
 
 // decrement 
 // predecrement
 
 let number15 = 3;
-let predecrement = --number15;
+let preDecrement = --number15;
 
-console.log(predecrement);
+console.log(preDecrement);
 
 // postdecrement
 
 let number16 = 2;
-let postdecrement = number16--;
+let postDecrement = number16--;
 
-console.log(postdecrement);
+console.log(postDecrement);
