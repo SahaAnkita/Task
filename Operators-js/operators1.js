@@ -5,9 +5,9 @@ Take two numbers and perform all the arithmetic operations over them.*/
 
 let number1 = 5;
 let number2 = 2;
-let add = number1 + number2;
+let addition = number1 + number2;
 
-console.log(add);
+console.log(addition);
 
 // subtraction
 

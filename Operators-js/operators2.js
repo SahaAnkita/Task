@@ -44,13 +44,10 @@ console.log(c2 > 0 || d2 > 0);
 Take 2 variable and compare them using == and ===, such that result of both the comparision operations is not equal.*/
 
 let a3 = 10;
-let a4 = 20;
-let a5 = 10;
+let a4 = "10";
 
 document.write(a3 == a4);
 document.write(a3 === a4);
-document.write(a3 == a5);
-document.write(a3 === a5);
 
 
 
