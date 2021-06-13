@@ -5,76 +5,76 @@ Take two numbers and perform all the arithmetic operations over them.*/
 
 let number1 = 5;
 let number2 = 2;
-let addition = number1 + number2;
+let addResult = number1 + number2;
 
-console.log(addition);
+console.log(addResult);
 
 // subtraction
 
 let number3 = 10;
 let number4 = 5;
-let subtraction = number3 - number4;
+let subResult = number3 - number4;
 
-console.log(subtraction);
+console.log(subResult);
 
 // multiplication
 
 let number5 = 10;
 let number6 = 5;
-let multiplication = number5 * number6;
+let multiplicationResult = number5 * number6;
 
-console.log(multiplication);
+console.log(multiplicationResult);
 
 // division
 
 let number7 = 10;
 let number8 = 5;
-let division = number7 / number8;
+let divisionResult = number7 / number8;
 
-console.log(division);
+console.log(divisionResult);
 
 // modulus / remainder
 
 let number9 = 14;
 let number10 = 3;
-let modulus = number9 % number10;
+let modulusResult = number9 % number10;
 
-console.log(modulus);
+console.log(modulusResult);
 
 // exponentiation
 
 let number11 = 3;
 let number12 = 2;
-let exponentiation = number11 ** number12;
+let exponentiationResult = number11 ** number12;
 
-console.log(exponentiation);
+console.log(exponentiationResult);
 
 // increment 
 // preincrement
 
 let number13 = 3;
-let preIncrement = ++number13;
+let preIncrementResult = ++number13;
 
-console.log(preIncrement);
+console.log(preIncrementResult);
 
 // postincrement
 
 let number14 = 2;
-let postIncrement = number13++;
+let postIncrementResult = number13++;
 
-console.log(postIncrement);
+console.log(postIncrementResult);
 
 // decrement 
 // predecrement
 
 let number15 = 3;
-let preDecrement = --number15;
+let preDecrementResult = --number15;
 
-console.log(preDecrement);
+console.log(preDecrementResult);
 
 // postdecrement
 
 let number16 = 2;
-let postDecrement = number16--;
+let postDecrementResult = number16--;
 
-console.log(postDecrement);
+console.log(postDecrementResult);
