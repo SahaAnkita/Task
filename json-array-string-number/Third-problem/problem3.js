@@ -33,4 +33,6 @@ let employeesJson = [
         "salary": 530000
     }
 ]
+let newValue = parseFloat(employeesJson.salary).toFixed(2)
+console.log(newValue);
 
