@@ -1,40 +1,41 @@
 /*1. 
 Add a js class called Employee and create methods in it to sort employees by different paramters and to filter by age.*/
 
+
 class Employee {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-    get employeeResult() {
-        return this.employeeAge;
-    }
-    employeeAge(employees, ageNumber) {
+}
+Employee.prototype.toString = function () {
+    return `Name: ${this.name} Age: ${this.age}`;
+};
 
-        return employees.filter(employees => employees.age < ageNumber);
+let employees = [];
+employees.push(new Employee('Ankita', 26));
+employees.push(new Employee('Chhaya', 17));
+employees.push(new Employee('Samir', 45));
+employees.push(new Employee('Purabi', 50));
+employees.push(new Employee('Ananya', 60));
 
-    }
-}
-let employees = []
-employees[0] = {
-    name: "Ankita",
-    age: 26
-}
-employees[1] = {
-    name: "Chhaya",
-    age: 17
-}
-employees[2] = {
-    name: "Samir",
-    age: 45
-}
-employees[3] = {
-    name: "Purabi",
-    age: 50
-}
-employees[4] = {
-    name: "Ananya",
-    age: 60
+function employeeName(employees, ab) {
+    employees.sort((a, b) => {
+        if (a.name.toLowerCase() < b.name.toLowerCase())
+            return -1;
+        if (a.name.toLowerCase() > b.name.toLowerCase())
+            return 1;
+        return 0;
+    })
+    return employees;
 }
 
-console.log(employeeAge(employees, 45));
+function employeeAge(employees, ageNumber) {
+
+    return employees.filter(employees => employees.age < ageNumber);
+
+}
+
+console.log(employeeName(employees, 'name'));
+
+console.log(employeeAge(employees, 50));
