@@ -33,6 +33,11 @@ let employeesJson = [
         "salary": 530000
     }
 ]
-let newValue = parseFloat(employeesJson.salary).toFixed(1)
-console.log(newValue);
+
+let employeeSalary = employeesJson.map(item => ({
+    name: item.name,
+    resultSalary: `item.salary * 0.00001 lac`
+}));
+console.log(employeeSalary);
+
 
