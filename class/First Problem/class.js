@@ -7,35 +7,46 @@ class Employee {
         this.name = name;
         this.age = age;
     }
-}
-Employee.prototype.toString = function () {
-    return `Name: ${this.name} Age: ${this.age}`;
-};
 
-let employees = [];
-employees.push(new Employee('Ankita', 26));
-employees.push(new Employee('Chhaya', 17));
-employees.push(new Employee('Samir', 45));
-employees.push(new Employee('Purabi', 50));
-employees.push(new Employee('Ananya', 60));
 
-function employeeName(employees, ab) {
-    employees.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase())
+    sortByEmployeeName(a, b) {
+        if (a.name.toLowerCase() < b.name.toLowerCase()) {
             return -1;
-        if (a.name.toLowerCase() > b.name.toLowerCase())
+        }
+        if (a.name.toLowerCase() > b.name.toLowerCase()) {
             return 1;
+        }
         return 0;
-    })
-    return employees;
-}
-
-function employeeAge(employees, ageNumber) {
-
-    return employees.filter(employees => employees.age < ageNumber);
+    }
 
 }
 
-console.log(employeeName(employees, 'name'));
 
-console.log(employeeAge(employees, 50));
+let employees = [{
+    name: 'Ankita',
+    age: 26,
+    id: 1
+},
+{
+    name: 'Chhaya',
+    age: 40,
+    id: 2
+},
+{
+    name: 'Samir',
+    age: 45,
+    id: 3
+},
+{
+    name: 'Purabi',
+    age: 50,
+    id: 4
+},
+{
+    name: 'Ananya',
+    age: 60,
+    id: 5
+}
+]
+
+console.log(employees.sort(Employee.sortByEmployeeName));
