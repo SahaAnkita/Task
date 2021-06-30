@@ -24,9 +24,9 @@ let employeesJson = [
     }
 ]
 
-let len = Object.keys(employeesJson).length;
+let jsonLength = Object.keys(employeesJson).length;
 
-for (let i = 0; i < len; i++) {
+for (let i = 0; i < jsonLength; i++) {
     try {
         console.log(`Dividing the employee age by null`)
             ((employeesJson[i].age) / null)
