@@ -49,11 +49,14 @@ funcEmp().then(function () {
     console.log(`present`)
     
     new Promise(function (resolve, reject) {
-        setTimeout(() => {
-            employees.forEach(item => (console.log(item)))
-        }, 4000)
+       employeeDetails()
     })
 }).catch(function () {
     console.log(`not present`)
 })
 
+function employeeDetails() {
+    for (let i = 0; i < employees.length; i++) {
+        setInterval(() => { console.log(employees[i]) }, 1000)
+    }
+}
