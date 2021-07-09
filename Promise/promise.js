@@ -47,13 +47,19 @@ function funcEmp() {
 }
 funcEmp().then(function () {
     console.log(`present`)
-    setInterval(employeeDetails, 1000)
+    employeeDetails()
+    
 }).catch(function () {
     console.log(`not present`)
 })
 
 function employeeDetails() {
-    for (let i = 0; i < employees.length; i++) {
-        console.log(employees[i])
-    }
+    let i = 0;
+    const interval = setInterval(()=> {
+        console.log(employees[i]);
+        i++;
+        if (i >= employees.length) {
+            clearInterval(interval)
+          }
+    }, 1000)
 }
