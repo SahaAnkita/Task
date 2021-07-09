@@ -1,7 +1,7 @@
 /*1.
 Divide the employee age by null and handle the error. Also if the error occurs divide it by 2 and print it.*/
 
-let employeesJson = [
+const employeesJson = [
     {
         "name": "Ankita",
         "age": 26
@@ -24,12 +24,12 @@ let employeesJson = [
     }
 ]
 
-let jsonLength = Object.keys(employeesJson).length;
+let jsonLength = employeesJson.length;
 
 for (let i = 0; i < jsonLength; i++) {
     try {
         console.log(`Dividing the employee age by null`)
-            ((employeesJson[i].age) / null)
+            (employeesJson[i].age)/ null
     } 
     catch (e) {
         console.log(`Previous age is  ${employeesJson[i].age}`);

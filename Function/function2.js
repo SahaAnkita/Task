@@ -28,6 +28,7 @@ let employees = [{
 }
 ]
 
+
 function sortByEmployeeName(a, b) {
     if (a.name.toLowerCase() < b.name.toLowerCase()) {
         return -1;
