@@ -47,16 +47,13 @@ function funcEmp() {
 }
 funcEmp().then(function () {
     console.log(`present`)
-    
-    new Promise(function (resolve, reject) {
-       employeeDetails()
-    })
+    setInterval(employeeDetails, 1000)
 }).catch(function () {
     console.log(`not present`)
 })
 
 function employeeDetails() {
     for (let i = 0; i < employees.length; i++) {
-        setInterval(() => { console.log(employees[i]) }, 1000)
+        console.log(employees[i])
     }
 }
