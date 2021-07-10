@@ -45,21 +45,19 @@ function funcEmp() {
 
     })
 }
+
 funcEmp().then(function () {
     console.log(`present`)
-    employeeDetails()
-    
+    new Promise(function (resolve, reject) {
+        let i = 0;
+        const interval = setInterval(() => {
+            console.log(employees[i]);
+            i++;
+            if (i >= employees.length) {
+                clearInterval(interval)
+            }
+        }, 1000)
+    })
 }).catch(function () {
     console.log(`not present`)
 })
-
-function employeeDetails() {
-    let i = 0;
-    const interval = setInterval(()=> {
-        console.log(employees[i]);
-        i++;
-        if (i >= employees.length) {
-            clearInterval(interval)
-          }
-    }, 1000)
-}
