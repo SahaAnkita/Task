@@ -31,8 +31,8 @@ const employees = [{
     }
 ]
 
-async function funcEmp() {
-    let funcEmp1 = new Promise(function (resolve, reject) {
+function funcEmp(index) {
+    return new Promise(function (resolve, reject) {
 
         if (employees != undefined) {
             console.log(`Employees are present`)
@@ -43,15 +43,11 @@ async function funcEmp() {
         }
 
     })
-    let printEmployees = await funcEmp1
-    console.log(printEmployees)
 }
 
 
-
-funcEmp().then(function () {
-    console.log(`present`)
-    new Promise(function (resolve, reject) {
+let result = async () => {
+    await funcEmp() 
         let i = 0;
         const interval = setInterval(() => {
             console.log(employees[i]);
@@ -60,8 +56,6 @@ funcEmp().then(function () {
                 clearInterval(interval)
             }
         }, 1000)
-    })
-}).catch(function () {
-    console.log(`not present`)
-})
+    }
 
+result();
