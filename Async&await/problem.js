@@ -31,7 +31,7 @@ const employees = [{
     }
 ]
 
-function funcEmp(index) {
+function funcEmp() {
     return new Promise(function (resolve, reject) {
 
         if (employees != undefined) {
@@ -46,7 +46,8 @@ function funcEmp(index) {
 }
 
 
-let result = async () => {
+
+let a = async () => {
     await funcEmp() 
         let i = 0;
         const interval = setInterval(() => {
@@ -58,4 +59,4 @@ let result = async () => {
         }, 1000)
     }
 
-result();
+a();
