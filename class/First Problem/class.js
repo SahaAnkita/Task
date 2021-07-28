@@ -1,14 +1,11 @@
 /*1. 
 Add a js class called Employee and create methods in it to sort employees by different paramters and to filter by age.*/
  
-let arr_of_emp = [];
 class Employee {
     constructor(name, age, id) {
         this.name = name;
         this.age = age;
         this.id = id;
-
-        arr_of_emp.push(this)
     }
 
 
