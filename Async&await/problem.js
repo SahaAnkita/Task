@@ -36,7 +36,7 @@ function funcEmp() {
 
         if (employees != undefined) {
             console.log(`Employees are present`)
-            resolve();
+            resolve(employees);
         } else {
             console.log(`Employees are not present`)
             reject();
@@ -45,18 +45,19 @@ function funcEmp() {
     })
 }
 
+function employeeDetails(inputEmployees) {
+    return new Promise(function (resolve, reject) {
+        for (let i = 0; i < employees.length; i++) {
+            setTimeout(() => {
+                console.log(inputEmployees[i])
+            }, i * 1000)
+        }
+    })
+}
 
+let result = async () => {
+    const employeeList = await funcEmp()
+    await employeeDetails(employeeList)
+}
 
-let a = async () => {
-    await funcEmp() 
-        let i = 0;
-        const interval = setInterval(() => {
-            console.log(employees[i]);
-            i++;
-            if (i >= employees.length) {
-                clearInterval(interval)
-            }
-        }, 1000)
-    }
-
-a();
+result();

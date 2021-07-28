@@ -37,7 +37,7 @@ function funcEmp() {
 
         if (employees != undefined) {
             console.log(`Employees are present`)
-            resolve();
+            resolve(employees);
         } else {
             console.log(`Employees are not present`)
             reject();
@@ -46,18 +46,19 @@ function funcEmp() {
     })
 }
 
-funcEmp().then(function () {
-    console.log(`present`)
+funcEmp().then(function (employeeList) {
+    console.log(employeeList);
     new Promise(function (resolve, reject) {
-        let i = 0;
-        const interval = setInterval(() => {
-            console.log(employees[i]);
-            i++;
-            if (i >= employees.length) {
-                clearInterval(interval)
-            }
-        }, 1000)
+       employeeDetails()
     })
+
 }).catch(function () {
     console.log(`not present`)
 })
+function employeeDetails(){
+for (let i = 0; i < employees.length; i++) {
+    setTimeout(() => {
+        console.log(employees[i])
+    }, i * 1000)
+}
+}
