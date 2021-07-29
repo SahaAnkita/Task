@@ -52,6 +52,7 @@ function employeeDetails(inputEmployees) {
                 console.log(inputEmployees[i])
             }, i * 1000)
         }
+        
     })
 }
 

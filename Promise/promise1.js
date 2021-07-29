@@ -46,16 +46,14 @@ function funcEmp() {
 
     })
 }
-funcEmp().then(function (employeeList) {
-    console.log(`present`)
 
-    new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log(employeeList.sort(sortByEmployeeName));
-        }, 2000)
-    })
-}).catch(function () {
-    console.log(`not present`)
+funcEmp().then(function (employeeList) {
+    console.log(`sorting employees`);
+    return employeeList.sort(sortByEmployeeName);
+}).then(function (message) {
+    setTimeout(() => {
+        console.log(message)
+    }, 2000)
 })
 
 function sortByEmployeeName(a, b) {

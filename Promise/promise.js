@@ -46,12 +46,8 @@ function funcEmp() {
 
 funcEmp().then(function (message) {
     console.log(message);
-    new Promise((resolve, reject) => {
-        employeeDetails()
-    })
-
-}).catch(function () {
-    console.log(`not present`)
+}).then(function () {
+    employeeDetails()
 })
 
 function employeeDetails() {
