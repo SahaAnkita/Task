@@ -36,29 +36,28 @@ function funcEmp() {
     return new Promise(function (resolve, reject) {
 
         if (employees != undefined) {
-            console.log(`Employees are present`)
-            resolve(employees);
+            resolve(`employees are present`);
         } else {
-            console.log(`Employees are not present`)
-            reject();
+            reject(`Employees are not present`);
         }
 
     })
 }
 
-funcEmp().then(function (employeeList) {
-    console.log(employeeList);
+funcEmp().then(function (message) {
+    console.log(message);
     new Promise(function (resolve, reject) {
-       employeeDetails()
+        employeeDetails()
     })
 
 }).catch(function () {
     console.log(`not present`)
 })
-function employeeDetails(){
-for (let i = 0; i < employees.length; i++) {
-    setTimeout(() => {
-        console.log(employees[i])
-    }, i * 1000)
-}
+
+function employeeDetails() {
+    for (let i = 0; i < employees.length; i++) {
+        setTimeout(() => {
+            console.log(employees[i])
+        }, i * 1000)
+    }
 }
