@@ -33,7 +33,7 @@ const employees = [{
 ]
 
 function funcEmp() {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
 
         if (employees != undefined) {
             resolve(`employees are present`);
@@ -46,7 +46,7 @@ function funcEmp() {
 
 funcEmp().then(function (message) {
     console.log(message);
-    new Promise(function (resolve, reject) {
+    new Promise((resolve, reject) => {
         employeeDetails()
     })
 

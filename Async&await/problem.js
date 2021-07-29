@@ -32,7 +32,7 @@ const employees = [{
 ]
 
 function funcEmp() {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
 
         if (employees != undefined) {
             console.log(`Employees are present`)
@@ -46,7 +46,7 @@ function funcEmp() {
 }
 
 function employeeDetails(inputEmployees) {
-    return new Promise(function (resolve, reject) {
+    return new Promise((resolve, reject) => {
         for (let i = 0; i < employees.length; i++) {
             setTimeout(() => {
                 console.log(inputEmployees[i])
