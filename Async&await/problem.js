@@ -52,7 +52,8 @@ function employeeDetails(inputEmployees) {
                 console.log(inputEmployees[i])
             }, i * 1000)
         }
-        
+        resolve(employees);
+        reject(error);
     })
 }
 
