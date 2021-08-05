@@ -6,7 +6,7 @@ class EmployeeList {
         this.list = employeeArray;
     }
     sortEmployees() {
-        return this.list.sort(sortByString)
+        return employeeArray.sort(sortByString)
     }
 
     sortByString(a, b) {
