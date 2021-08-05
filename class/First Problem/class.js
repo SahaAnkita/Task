@@ -6,7 +6,7 @@ class EmployeeList {
         this.list = employeeArray;
     }
     sortEmployees() {
-        return employeeArray.sort(sortByString)
+        return this.list.sort(this.sortByString)
     }
 
     sortByString(a, b) {
@@ -50,4 +50,4 @@ const employees = [{
 
 const obj1 = new EmployeeList(employees);
 
-console.log(obj1.sortEmployees);
+console.log(obj1.sortEmployees());
