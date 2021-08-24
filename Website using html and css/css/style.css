@@ -1,150 +1,447 @@
-*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-a{ text-decoration: none; letter-spacing: 2px;}
-
-a:hover{ text-decoration: none; }
-
-h2{ letter-spacing: 2px; color: #C53F3F;}
-
-li{ text-decoration: none; }
-
-p{
-    font-size: 0.9rem;
-    line-height: 1.6;
-    font-weight: 400;
-    color: #606060;
-}
-.extra-div h2, .servicediv h2 {
-    font-size: 0.9rem;
-    margin: 20px 0 15px 0;
-    font-weight: bold;
-    line-height: 1.1;
-    word-spacing: 4px;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-/* actual css classes start */
+.toggle-btn {
+    position: absolute;
+    left: 105%;
+    top: 15px;
+    cursor: pointer;
+}
 
-.header {
-    width: 100%;
-    height: 100vh;
-    background-image:url('../Images/img3.jpg');
+.toggle-btn span {
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+}
+
+.head-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 1em 0em 1em 0.5em;
+    border-bottom: 0.5px solid grey;
+}
+
+.head-div img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0.5em !important;
+}
+
+.head-div1 p {
+    font-size: 16px;
+    margin-left: 0.5em;
+    color: white;
+}
+
+#sidebar {
+    position: fixed;
+    width: 20%;
+    left: -20%;
+    background-image: url('../Images/sidebar.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0 75%, 0 0);
-    position: relative;
+    height: 100%;
 }
 
-.header:before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    opacity: .3;
-    z-index: -1;
-
-}
-.navbar:before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    opacity: .3;
-    z-index: -1;
-
-}
-.nav-item a {
-    color: #000 !important;
-    
-}
-.nav-item a:hover { 
-    font-weight: bold;
-}
-.navbar-toggler-icon {
-    color: #fff !important;
-}
-
-.heading {
-    color: #C53F3F;
-}
-.header-buttons a {
-    border: 1px solid #000;
-    border-radius: 100px;
-    padding: 12px 55px;
-    outline: none;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.4;
+#sidebar li {
+    width: 90%;
+    height: 2.5em;
+    margin: auto;
     text-align: center;
 }
-.header-buttons a:hover {
-    color: rgb(255, 255, 255);
-    background: #C53F3F;
-    text-decoration: none;
-    border: 1px solid rgb(255, 255, 255);
+
+#sidebar li:hover {
+    background-color: #00acc1;
+    border-radius: 3px;
 }
-form dt,dd {
-    letter-spacing: 1px;
+
+#sidebar ul a {
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 0.7em;
 }
-.hsection {
-    height: 90vh;
+
+
+#sidebar ul a i {
+    margin-right: 16px;
 }
-.sbutton:hover {
-    background: #C53F3F !important;
-    color: #fff !important;
+
+#sidebar.active {
+    left: 0;
 }
-.tbl {
-    background: #C53F3F !important;
-    letter-spacing: 2px;
+
+.upgrade {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    height: 3em;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00acc1;
+    border-radius: 3px;
 }
-.tbl th {
-    color: #fff;
+
+.upgrade p {
+    color: white;
+    margin-left: 0.5em;
 }
-@media (max-width: 991px) {
-    h2 {
-        font-size: 1.12rem !important;
+
+.upgrade-img {
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0em;
+    margin-left: 0.5em;
+}
+
+.upgrade-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+section {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .toggle-btn {
+        position: absolute;
+        left: 105%;
+        top: 15px;
+        cursor: pointer;
     }
-    p {
-        font-size: 0.9rem !important;
+
+    .toggle-btn span {
+        display: block;
+        background-color: black;
+        width: 15px;
+        height: 2px;
+        margin: 3px;
     }
-    .header-buttons a {
-        padding: 8px 55px;
-        outline: none;
-        color: #000;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.4;
+
+    .head-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        padding: 1em 0em 1em 1em;
+        border-bottom: 0.5px solid grey;
+    }
+
+    .head-div img {
+        height: 1em;
+        width: 1em;
+        margin-top: 0em !important;
+    }
+
+    .head-div1 p {
+        font-size: 14px;
+        margin-left: 0.5em;
+        color: white;
+    }
+
+    #sidebar {
+        position: fixed;
+        width: 40%;
+        left: -40%;
+        background-image: url('../Images/sidebar.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
+    }
+
+    #sidebar li {
+        font-size: 15px;
+        width: 90%;
+        height: 2.5em;
+        margin: auto;
         text-align: center;
     }
-    .tbl th,td{
-        font-size: 0.7rem !important;
+
+    #sidebar li:hover {
+        background-color: #00acc1;
+        border-radius: 3px;
     }
-    form dt,dd {
-        font-size: 0.8rem !important;
+
+    #sidebar ul a {
+        height: 100%;
+        width: 100%;
+        font-size: 16px;
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0.7em;
     }
-    .responsive > thead th {
-      display: none;
+
+    #sidebar ul a i {
+        margin-right: 16px;
     }
-    .responsive > tbody td,
-    .responsive > tbody th {
-      display: block;
+
+    #sidebar.active {
+        left: 0;
     }
-   
-    [row-header] {
-      position: relative;
-      width: 50%;
-      vertical-align: middle;
+
+    .upgrade {
+        position: absolute;
+        bottom: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        height: 3em;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #00acc1;
+        border-radius: 3px;
     }
-    [row-header]:before {
-      content: attr(row-header);
-      display: inline-block;
-      vertical-align: middle;
-      text-align: left;
-      width: 50%;
-      padding-right:30px;
+
+    .upgrade p {
+        color: white;
+        margin-left: 0.5em;
+        font-size: 14px;
     }
-  }
+
+    .upgrade-img {
+        height: 1em;
+        width: 1em;
+        margin-top: 0em;
+        margin-left: 0.5em;
+    }
+
+    .upgrade-img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .main {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    section {
+        background-color: #eee;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        transition: all .5s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .toggle-btn span {
+        width: 20px;
+        height: 3px;
+        margin: 3px;
+    }
+
+    .head-div img {
+        height: 1em;
+        width: 1em;
+        margin-top: 0em !important;
+    }
+
+    .head-div1 p {
+        font-size: 14px;
+    }
+
+    #sidebar {
+        width: 55%;
+        left: -55%;
+    }
+
+    #sidebar ul a {
+        font-size: 14px;
+    }
+
+    .upgrade p {
+        font-size: 12px;
+        margin-left: 0.5em;
+    }
+
+    .upgrade-img {
+        height: 1em;
+        width: 1em;
+    }
+}
+
+/* @import url() */
+/* body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.head-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.head-div img{
+    height: 1.5em;
+    width: 1.5em;
+    margin-top: 0.5em !important;
+}
+.head-div1 p {
+    font-size: 16px;
+    margin-left: 0.5em;
+}
+.sidebar {
+    position: relative;
+    background-image: url('../Images/sidebar.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    transition: all .5s ease;
+}
+.main {
+    background-color: rgba(0,0,0,0.8);
+}
+.sidebar header {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    border-bottom: 0.2px solid white;
+    width: 95%;
+    margin: auto;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 16px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+    background-color: #00acc1;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+}
+
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+.upgrade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 95%;
+    margin: auto !important;
+    background-color: #00acc1;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 26px;
+    color: #898c8d;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked~label #cancel {
+    left: 220px;
+    top: 0px;
+}
+
+#check:checked~section {
+    margin-left: 250px;
+} */
+
+/* section {
+    background-image: url('../Images/img3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+} */
