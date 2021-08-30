@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="css/profile.css" />
+    <title>Web Development</title>
+</head>
+
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="main">
+            <div class="sidebar-brand">
+                <a href="/index.html"><span class="logo fab fa-react"></span><span class="logo-header">CREATIVE
+                        TIM</span></a>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li><a href="/index.html"><span class="fas fa-qrcode"></span><span>Dashboard</span></a></li>
+                    <li><a href="/profile.html" class="active"><span class="fa fa-user"></span><span>User
+                                Profile</span></a></li>
+                    <li><a href="/table.html"><span class="fas fa-clipboard"></span><span>Table List</span></a></li>
+                    <li><a href="/typo.html"><span class="fas fa-calendar-week"></span><span>Typography</span></a></li>
+                    <li><a href="/icons.html"><span class="fas fa-question-circle"></span><span>Icons</span></a></li>
+                    <li><a href="/map.html"><span class="fas fa-map-marker"></span><span>Maps</span></a></li>
+                    <li><a href="/notification.html"><span class="fas fa-bell"></span><span>Notifications</span></a>
+                    </li>
+                    <li><a href="#"><span class="fas fa-globe"></span><span>RTL Support</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <div>
+                <h2>
+                    <label for="nav-toggle">
+                        <span class="fas fa-bars"></span>
+                    </label>
+                    User Profile
+                </h2>
+            </div>
+            <div>
+                <div class="search-wrapper">
+                    <input type="search" placeholder="Search here">
+                    <div class="span-div">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <span class="fa fa-th-large ico"></span>
+                    <a href="" class="fa fa-bell badge1" data-badge="5"></a>
+                    <span class="fa fa-user ico"></span>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div class="recent-grid">
+                <div class="card">
+                    <div class="card-double">
+                        <div class="tasks-nav">
+                            <h3>Edit Profile</h3>
+                            <p>Complete your profile</p>
+                        </div>
+                    </div>
+
+                    <form>
+                        <div class="cards">
+
+                            <div class="card-sub">
+                                <label for="name">Company</label>
+                                <input type="text" id="name" name="user_name">
+
+                            </div>
+                            <div class="card-sub">
+                                <label for="name">Username</label>
+                                <input type="text" id="name" name="user_name">
+
+                            </div>
+                            <div class="card-sub">
+                                <label for="email">Email address</label>
+                                <input type="email" id="mail" name="user_email">
+                            </div>
+
+
+                            <div class="card-sub">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div class="card-sub">
+                                <label for="name">Last Name</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div class="card-sub">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="user_password">
+                            </div>
+
+                            <div class="card-sub">
+                                <label for="name">City</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div class="card-sub">
+                                <label for="name">Country</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div class="card-sub">
+                                <label for="name">Postal Code</label>
+                                <input type="text" id="name" name="user_name">
+                            </div>
+                            <div class="card-sub">
+                                <label for="Gender">Gender : </label>
+                                <input type="radio" id="Male" name="fav_language" value="Male">
+                                  <label for="Male">Male</label>
+                                  <input type="radio" id="Female" name="fav_language" value="Female">
+                                  <label for="Female">Female</label>
+                            </div>
+                            <div class="card-sub">
+                                <select class="select-menu">
+                                    <option>Select menu option</option>
+                                    <option>2nd option</option>
+                                    <option>3rd option</option>
+                                    <option>4th option</option>
+                                    <option>5th option</option>
+                                </select>
+                            </div>
+                            <div class="card-sub">
+                                <p>Checkboxes</p>
+                                <div class="ex-checkbox">
+                                    <input type="checkbox" id="checkbox_one" checked="checked" />
+                                    <label for="checkbox_one">Checkbox1</label>
+                                </div>
+                                <div class="ex-checkbox">
+                                    <input type="checkbox" id="checkbox_two" />
+                                    <label for="checkbox_two">Checkbox2</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards1">
+                            <label for="name">Lamborghini Mercy,Your chick she so thirsty,I'm in that two seat
+                                Lambo.</label>
+                            <input type="text" id="name" name="user_name">
+                        </div>
+                    </form>
+                    <div class="upd-div"><button class="upd-btn">Update Profile</button></div>
+                </div>
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-triple">
+                            <div class="pro">
+                                <img src="/Images/pro.jpg">
+                            </div>
+                        </div>
+                        <br>
+                        <h3 class="ceo">CEO / CO-FOUNDER</h3>
+                        <h3 class="ceo">Alec Thompson</h3>
+                        <p class="ceo-para"> Don't be scared of the truth because we need to restart the human
+                            foundation in truth And I
+                            love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...</p>
+                        <div class="fbtn-div"><button class="follow-btn">Follow</button></div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="footer">
+            <div class="footer1">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#news">COMPANY</a></li>
+                    <li><a href="#contact">PORTFOLIO</a></li>
+                    <li><a href="#about">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="footer2">&copy;2021 Creative Tim, made with love for a better web</div>
+        </div>
+    </div>
+</body>
+
+</html>
