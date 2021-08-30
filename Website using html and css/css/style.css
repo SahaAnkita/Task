@@ -726,11 +726,15 @@ tr td:last-child {
         width: calc(100% - 70px);
         left: 70px;
     }
+    
 }
 
 @media only screen and (max-width: 960px) {
     .cards {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .cards1 {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .recent-grid {
@@ -742,7 +746,9 @@ tr td:last-child {
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .cards1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .recent-grid {
         grid-template-columns: 100%;
     }
@@ -816,5 +822,8 @@ tr td:last-child {
 @media only screen and (max-width: 560px) {
     .cards {
         grid-template-columns: 100%;
+    }
+    .cards1 {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
