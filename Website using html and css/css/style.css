@@ -726,6 +726,9 @@ tr td:last-child {
         width: calc(100% - 70px);
         left: 70px;
     }
+    main {
+        margin-top: 70px;
+    }
     
 }
 
