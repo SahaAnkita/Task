@@ -3,7 +3,14 @@
 :root {
     --main-color: #00acc1;
     --color-dark: #1D2231;
+    --color-grey: #ccc;
+    --color-icon-grey: #999;
+    --color-dark-grey: #555;
+    --text-light: #fff;
     --text-grey: #eee;
+    --color-light-violet: #ab47bc; 
+    --color-dark-violet: #8e24aa;
+    --color-danger: #e53935;
 }
 
 * {
@@ -46,7 +53,7 @@
 }
 
 .sidebar-brand .logo-header {
-    color: #fff;
+    color: var(--text-light);
 }
 
 .sidebar-brand span {
@@ -67,14 +74,14 @@
 .sidebar-menu a {
     padding-left: 1rem;
     display: block;
-    color: #fff;
+    color: var(--text-light);
     font-size: 1.1rem;
 }
 
 .sidebar-menu a.active {
     background: var(--main-color);
     padding: 1rem 0rem 1rem 1rem;
-    color: #fff;
+    color: var(--text-light);
 }
 
 .sidebar-menu a span:first-child {
@@ -124,12 +131,12 @@ header {
     width: calc(100% - 345px);
     top: 0;
     z-index: 100;
-    background-color: #eee;
+    background-color: var(--text-grey);
     transition: left 300ms;
 }
 
 header h2 {
-    color: #555;
+    color: var(--color-dark-grey);
     font-weight: 400;
 }
 
@@ -163,8 +170,8 @@ header label span {
 }
 
 .search-wrapper input {
-    background-color: #eee;
-    border-bottom: 1px solid #ccc !important;
+    background-color: var(--text-grey);
+    border-bottom: 1px solid var(--color-grey) !important;
 }
 
 .search-wrapper .span-div {
@@ -175,7 +182,7 @@ header label span {
     height: 40px;
     width: 40px;
     border-radius: 50px;
-    background: #fff;
+    background: var(--text-light);
     box-shadow: rgba(141, 145, 148, 0.15) 0px 1px 2px 0px;
 }
 
@@ -187,7 +194,7 @@ header label span {
 }
 
 .search-wrapper a {
-    color: #000;
+    color: var(--color-dark);
 }
 
 .ico {
@@ -205,8 +212,8 @@ header label span {
     top: -10px;
     right: -10px;
     font-size: .7em;
-    background: red;
-    color: white;
+    background: var(--color-danger);
+    color: var(--text-light);
     width: 16px;
     height: 16px;
     text-align: center;
@@ -243,12 +250,6 @@ header label span {
     margin-top: 1rem;
     padding: 1em;
 }
-
-form input {
-    border: none;
-    border-bottom: 1px solid #555;
-}
-
 .recent-grid {
     margin-top: 3.5rem !important;
     display: grid;
@@ -257,7 +258,7 @@ form input {
 }
 
 .card {
-    background: #fff;
+    background: var(--text-light);
     box-shadow: rgba(141, 145, 148, 0.15) 0px 1px 2px 0px, rgba(141, 145, 148, 0.15) 0px 2px 6px 2px;
     border-radius: 5px;
     padding-bottom: 1em;
@@ -277,7 +278,7 @@ form input {
 .card-header button {
     background: var(--main-color);
     border-radius: 10px;
-    color: #fff;
+    color: var(--text-light);
     font-size: .8rem;
     padding: .5rem 1rem;
     border: 1px solid var(--main-color);
@@ -286,7 +287,7 @@ form input {
 .card-double {
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    background: var(--text-light);
     width: 98%;
     margin: auto;
     border-radius: 4px;
@@ -299,17 +300,17 @@ form input {
     margin-top: -20px;
     border-radius: 4px;
     padding: 1em 0em 1em 1em;
-    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+    background: linear-gradient(60deg, var(--color-light-violet), var(--color-dark-violet));
 }
 
 .tasks-nav h3 {
     font-weight: 400;
-    color: #fff;
+    color: var(--text-light);
 }
 
 .tasks-nav p {
     font-size: 13px;
-    color: #ccc;
+    color: var(--color-grey);
     margin-top: 0.3em;
 }
 
@@ -326,7 +327,7 @@ form input {
 
 .tasks-nav li a {
     display: block;
-    color: white;
+    color: var(--text-light);
     text-align: center;
     padding: 14px 16px;
     font-size: 14px;
@@ -342,176 +343,21 @@ form input {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.tasks-nav1 {
-    height: 4em;
-    width: 100%;
-    margin-top: -20px;
-    border-radius: 4px;
-    padding: 0.5em 0em 0.5em 0.5em;
-    color: #fff;
-    font-weight: 400 !important;
-    background: linear-gradient(60deg, #ffa726, #fb8c00);
-}
-
-.tasks-nav1 h4 {
-    font-weight: 400;
-}
-
-.tasks-nav1 p {
-    font-size: 13px;
-    color: #eee;
-}
 
 main {
     margin-top: 80px;
     padding: 2rem 1.5rem;
-    background-color: #eee;
+    background-color: var(--text-grey);
     min-height: calc(100vh - 90px);
 }
-
-.arrow-icon {
-    color: #66bb6a;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-
-thead td {
-    font-weight: 700;
-}
-
-td {
-    padding: .5rem 1rem;
-    font-size: .9rem;
-    color: #222;
-}
-
-td .status {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-tr td:last-child {
-    display: flex;
-    align-items: center;
-}
-
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-}
-
-.tbl {
-    padding: 1em;
-
-}
-
-.tbl tr {
-    border-bottom: 0.5px solid #ccc;
-
-}
-
-.tbl td {
-    font-size: 13px !important;
-    padding: 1.5em 0.5em 1.5em 0em !important;
-}
-
-.customer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5rem .7rem;
-}
-
-.icon-side {
-    display: flex;
-    flex-direction: row;
-}
-
-.icon-side div {
-    padding-left: 1em;
-    font-weight: 400 !important;
-}
-
-.p-icon {
-    color: #ab47bc;
-}
-
-.t-icon {
-    color: red;
-}
-
-.second-table thead td {
-    color: #ffa726;
-    font-weight: 400;
-}
-
-.second-table tbody td {
-    font-weight: 400;
-    font-size: 12px;
-}
-
-.second-table tr {
-    border-bottom: 0.5px solid #ccc;
-}
-
-.customers .card-body {
-    margin-top: 2em;
-    padding: 1em;
-}
-
-.info {
-    display: flex;
-    align-items: center;
-}
-
-.info img {
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.info h4 {
-    font-size: .8rem;
-    font-weight: 700;
-    color: #222;
-}
-
-.info small {
-    font-weight: 600;
-    color: var(--text-grey);
-}
-
-.contact span {
-    font-size: 1.2rem;
-    display: inline-block;
-    margin-left: .5rem;
-    color: var(--main-color);
-}
-
-
-
-.profile-div {
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 6em;
-    height: 6em;
-    margin: auto;
-}
-
-
 
 .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5em;
-    border: 0.5px solid #ccc;
-    background-color: #eee;
+    border: 0.5px solid var(--color-grey);
+    background-color: var(--text-grey);
 }
 
 .footer1 ul {
@@ -527,7 +373,7 @@ tr td:last-child {
 
 .footer1 li a {
     display: block;
-    color: gray;
+    color: var(--color-dark-grey);
     text-align: center;
     padding: 14px;
     text-decoration: none;
@@ -536,7 +382,7 @@ tr td:last-child {
 
 .footer2 {
     padding: 0.5em;
-    color: gray;
+    color: var(--color-icon-grey);
     font-size: 13px;
 }
 
@@ -567,9 +413,21 @@ tr td:last-child {
         width: calc(100% - 70px);
         left: 70px;
     }
+    main {
+        margin-top: 70px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media only screen and (max-width: 960px) {}
+@media only screen and (max-width: 960px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -597,7 +455,7 @@ tr td:last-child {
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        color: #fff;
+        color: var(--text-light);
         display: flex;
         align-items: center;
         justify-content: center !important;
@@ -638,6 +496,15 @@ tr td:last-child {
     #nav-toggle:checked+.sidebar li a span:last-child {
         display: inline;
     }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-@media only screen and (max-width: 560px) {}
+@media only screen and (max-width: 560px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
