@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [users, setUser] = useState([]);
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         loadUsers();
@@ -12,7 +12,7 @@ const Home = () => {
 
     const loadUsers = async () => {
         const result = await axios.get("http://localhost:3002/users");
-        setUser(result.data.reverse());
+        setUsers(result.data.reverse());
     }
 
     const deleteUser = async id => {
