@@ -16,7 +16,6 @@ const Employee = ({ employee }) => {
 
     return (
         <>
-            <td>{employee.id}</td>
             <td>{employee.name}</td>
             <td>{employee.age}</td>
             <td>{employee.address}</td>

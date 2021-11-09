@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { EmployeeContext } from '../contexts/EmployeeContext';
 import { useContext, useState } from 'react';
+import Base64Image from "../utils/Base64Image";
 
 const EditForm = ({ theEmployee }) => {
 
@@ -14,23 +15,8 @@ const EditForm = ({ theEmployee }) => {
     const [image, setImage] = useState(theEmployee.image);
 
     const { updateEmployee } = useContext(EmployeeContext);
-    const updatedEmployee = { id, name, age, address, gender, about }
+    const updatedEmployee = { id, name, age, address, gender, about,image }
 
-    const onImageChange = async e => {
-        setImage({ ...image, image: await convertBase64(e.target.files[0]) })
-    }
-    const convertBase64 = (file) => {
-        return new Promise((resolve, reject) => {
-            const fileReader = new FileReader();
-            fileReader.readAsDataURL(file)
-            fileReader.onload = () => {
-                resolve(fileReader.result);
-            }
-            fileReader.onerror = (error) => {
-                reject(error);
-            }
-        })
-    }
     const handleSubmit = (e) => {
         e.preventDefault();
         updateEmployee(id, updatedEmployee)
@@ -83,9 +69,7 @@ const EditForm = ({ theEmployee }) => {
                     onChange={(e) => setAbout(e.target.value)}
                     required
                 />
-                <div >
-                    <input type="file" multiple  name="image" id="file" onChange={e => onImageChange(e)} />
-                </div>
+                <Base64Image onChange={e => setImage(e)} />
             </div>
 
             <Button className="editbtn" variant="success" type="submit">Edit Employee</Button>

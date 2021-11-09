@@ -30,7 +30,6 @@ const EmployeeList = () => {
                 <Table responsive="sm">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Address</th>
