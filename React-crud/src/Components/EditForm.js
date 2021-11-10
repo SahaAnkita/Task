@@ -1,23 +1,35 @@
+/* eslint-disable */
+
 import { Button } from "react-bootstrap";
 import { EmployeeContext } from "../contexts/EmployeeContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import Base64Image from "../utils/Base64Image";
 
 const EditForm = ({ theEmployee }) => {
-  const id = theEmployee.id;
-  const [name, setName] = useState(theEmployee.name);
-  const [age, setAge] = useState(theEmployee.age);
-  const [address, setAddress] = useState(theEmployee.address);
-  const [gender, setGender] = useState(theEmployee.gender);
-  const [about, setAbout] = useState(theEmployee.about);
-  const [image, setImage] = useState(theEmployee.image);
-
   const { updateEmployee } = useContext(EmployeeContext);
-  const updatedEmployee = { id, name, age, address, gender, about, image };
+  const [employee, setEmployee] = useState({
+    name: "",
+    age: "",
+    address: "",
+    gender: "",
+    about: "",
+    image: "",
+    id: "",
+  });
+  useEffect(() => {
+    setEmployee(theEmployee);
+  }, []);
+
+  const handleChange = (e) => {
+    setEmployee({ ...employee, [e.target.name]: e.target.value });
+  };
+  const handleImage = (e) => {
+    setEmployee({ ...employee, ["image"]: e });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateEmployee(id, updatedEmployee);
+    updateEmployee(employee.id, employee);
   };
 
   return (
@@ -28,8 +40,8 @@ const EditForm = ({ theEmployee }) => {
           type="text"
           placeholder="Name *"
           name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={employee.name}
+          onChange={handleChange}
           required
         />
         <label htmlFor="age">Age</label>
@@ -37,26 +49,18 @@ const EditForm = ({ theEmployee }) => {
           type="number"
           placeholder="Age *"
           name="age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
+          value={employee.age}
+          onChange={handleChange}
           required
         />
         <label htmlFor="address">Address</label>
-        <select
-          name="address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        >
+        <select name="address" value={employee.address} onChange={handleChange}>
           <option>Select your location</option>
           <option>Chennai</option>
           <option>Kolkata</option>
           <option>Delhi</option>
         </select>
-        <div
-          name="gender"
-          value={gender}
-          onChange={(e) => setGender(e.target.value)}
-        >
+        <div name="gender" value={employee.gender} onChange={handleChange}>
           <label htmlFor="gender">Gender</label>
           <input type="radio" id="male" name="gender" value="Male" />
           <label htmlFor="Male">Male</label>
@@ -66,13 +70,13 @@ const EditForm = ({ theEmployee }) => {
         <label htmlFor="about">About</label>
         <input
           type="text"
-          placeholder="About *"
+          placeholder="About"
           name="about"
-          value={about}
-          onChange={(e) => setAbout(e.target.value)}
+          value={employee.about}
+          onChange={handleChange}
           required
         />
-        <Base64Image onChange={(e) => setImage(e)} />
+        <Base64Image onChange={handleImage} />
       </div>
 
       <Button className="editbtn" variant="success" type="submit">
